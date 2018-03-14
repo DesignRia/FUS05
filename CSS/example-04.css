@@ -16,11 +16,13 @@ body{
     width: 850px;
     /* grid를 사용하는 것이 더 수월함 */
     margin: 0 auto;
+    padding: 10px 20px;
     border: 1px solid black;
 }
 .box{
     height: 150px;
     width: 200px;
+    margin: 10px 0;
     /* margin-bottom: 15px; */
 }
 .box:nth-child(odd){
