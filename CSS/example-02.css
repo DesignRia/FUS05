@@ -1,0 +1,10 @@
+@charset "utf-8";
+.wrapper article:nth-child(5){
+    background-color: skyblue;
+}
+.wrapper .amy{
+    background-color: salmon;
+}
+.wrapper article:nth-of-type(5){
+    background-color: yellow;
+}
