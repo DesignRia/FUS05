@@ -1,0 +1,18 @@
+@charset "utf-8";
+.member{
+    box-sizing: border-box;
+    width: 500px;
+    border: 10px solid blue;
+    padding: 0 100px;
+    /* margin만 auto사용 가능, padding 불가, auto는 상자 길이를 자동으로 늘려주는 것 */
+    /* margin이 겹치면 큰쪽으로 겹쳐짐, 투명도 때문 */
+    margin: 80px auto 0 auto;
+    background-color: yellow;
+}
+body{
+    margin: 0;
+}
+h1{
+    background: pink;
+    margin: 0 0 50px 0;
+}
