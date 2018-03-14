@@ -8,11 +8,17 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 예제 1</title>
     <!-- 릴레이션을 shortcut icon으로 해서 링크값 설정하면 파비콘 설정 가능-->
-    <link rel="stylesheet" href="CSS/style.css"> 
+    <style>
+        body{
+            /* !important선언은 값에다가 붙임, 우선 순위를 제일 높여줌 */
+            background-color: yellow !important;
+            color: green; 
+        }
+        </style> 
+        <link rel="stylesheet" href="css/example-01.css ">
 </head>
 <body>
-    <p> 
-        <h1>안녕하세요</h1>
-    </p>
+    <h1>내부 스타일 시트 적용하기</h1>
+    <h1 style="color:blue">인라인 스타일 시트 적용하기</h1>
 </body>
 </html>
