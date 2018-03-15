@@ -1,0 +1,27 @@
+@charset "utf-8";
+body{
+    margin: 0;
+}
+.container{
+    /* 속기법 순서 참고 width style color */
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: "box box box box";
+    grid-auto-columns: 20%;
+    grid-auto-rows: 100px;
+    justify-content: space-between;
+    grid-row-gap: 30px;
+}
+.box:nth-child(odd){
+    background: yellow;
+}
+.box:nth-child(even){
+    background: pink;
+}
+.box2{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+.box8{
+    order: -1;
+}
