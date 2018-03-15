@@ -1,0 +1,33 @@
+@charset "utf-8";
+body{
+    margin: 0;
+}
+@keyframes text-ani{
+    0%{
+        font-size: 16px;
+        color: rgba(0,0,0,0.2);
+        transform: translate(0,0);
+    }
+    100%{
+        font-size: 26px;
+        color: rgba(0,0,0,1);
+        transform: translate(400px, 100px);
+    }
+}
+
+.container{
+    width: 1000px;
+    height: 300px;
+    margin: 50px auto;
+    border: 1px solid black;
+}
+
+.text{
+    animation-name: text-ani;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    background: yellow;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
