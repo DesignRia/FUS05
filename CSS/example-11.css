@@ -1,0 +1,30 @@
+@charset "utf-8";
+body{
+    margin: 0;
+    /* vh viewport height */
+    /* height: 100vh;*/
+    /* background-color: orange;
+    background-image: url("../images/computer-search.jpg");
+    background-repeat: no-repeat; */
+    /* 백분율 값을 넣으면 이미지와 배경 모두를 기준으로 변경 */
+    /* background-position: 50% 0; */
+    /* background-size: 500px 300px; 반응형 사이트 작업시 유용, cover */
+    /* background-attachment: fixed; */
+
+    /* 속기법으로 사용할땐 size 속성어 앞에 /붙여서 써줌 */
+    /* background:pink url("../images/computer-search.jpg") no-repeat 50% 0 /500px 350px fixed; */
+
+    /* gradient 속성 */
+    background-color:skyblue;
+    background-image: url("../images/profile.png"), linear-gradient(to bottom, red 0%, green 100%);
+    background-repeat: no-repeat;
+    /* background-size: 200px 200px; */
+    background-position: 50px 50px, 0 0;
+    background-attachment: fixed;
+
+    /* 멀티 배경 속성을 속기법으로 사용할때 배경 컬러 속성을 지정하지 않는다, 배경 컬러 지정시 따로 선언해 줘야한다 */
+    background: url("../images/profile.png") no-repeat 50px 50px /200px 200px fixed,
+    linear-gradient(to bottom, yellowgreen 0%, green 100%) repeat 0 0 /cover fixed;
+    background-color: yellow;
+}
+
