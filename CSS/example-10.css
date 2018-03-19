@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 기본 margin 이 8px이 지정되어있음 */
+body{
+    margin: 0;
+}
+div{
+    background-color: black;
+}
+h1{
+    background-color: lightpink;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+.span1{
+    background-color: blue;
+    color: white;
+    display: block;
+}
+
+h2{
+    /* x갑 y값 blur값 spread값 색*/
+    box-shadow: 5px 5px 0px 0 black;
+    background-color: #fcf;
+
+}
+.box{
+    background-color: grey;
+    height: 200px;
+    width: 500px;
+    /* absolute와 absolute를 사용하기 보다는 relative와 조합해서 사용한다. */
+    position: relative;
+}
+h3{
+    background-color: #0fc;
+    /* absolute를 설정하면 기본설정이 자동으로 display:block으로 지정됨 */
+    /* 가까운 상위 요소의 postion이 static이 아니면 기준으로 삼는다 */
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+span{
+    background-color: #0fc;
+    width: 100px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
