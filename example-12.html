@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- //독타입 선언 -->
+<html lang="ko"> <!-- 국가코드 ko -->
+<head>
+    <meta charset="UTF-8"> <!-- //다양한 언어를 인코딩 해주는 값, 제일 상단에 선언해줘야 함. 선언 순서가 중요. -->
+    <!--반응형 사이트를 위해서 viewport 값 설정해줘야함, width ~ 사용 기기별 대응 크기 변화 및 사용자 크기 변화 권한 부여 -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 예제 12</title>
+    <link rel="stylesheet" href="CSS/example-12.css"> 
+</head>
+<body>
+    <div class="container">
+        <!-- 형제요소 선언 header.header+section.ad+main.main+footer.footer -->
+        <header class="header">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="images/fc_logo.png" alt="fast campus">
+                </a>
+            </h1>
+            <nav class="navigation">
+                <!-- 숨김 컨텐츠 -->
+                <h2 class="readable-hidden">메인메뉴</h2>
+                <!-- ul.menu>li*5>a[href="#"] -->
+                <ul class="menu">
+                    <li><a href="#">이벤트/기획전</a></li>
+                    <li><a href="#">직무교육</a></li>
+                    <li><a href="#">기업교육</a></li>
+                    <li><a href="#">외국어교육</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="ad">광고</section>
+        <main class="main">메인</main>
+        <footer class="footer">푸터</footer>    
+    </div>
+</body>
+</html>
