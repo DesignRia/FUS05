@@ -80,28 +80,50 @@ body{
         right:1em;
         width: 40px;
         height: 40px;
+        overflow: hidden;
     }
     .btn-menubar{
-        display:none;
+        border: 0;
+        background: transparent;
+        padding: 0;
+        color: rgba(0,0,0,0);
+        cursor: pointer;
     }
     .menubar{
+        cursor: pointer;
         position: absolute;
         left:0;
         background-color: #181818;
         border-radius: 10px;
         width: 100%;
         height: 25%;
+        transition: 100ms;
     }
     .menubar-top{
         top:0;
+    }
+    /* 먼저 축을 변경하고 회전시켜야한다. */
+    .menubar-act.menubar-top{
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
     }
     .menubar-middle{
         top:50%;
         transform: translateY(-50%);
     }
+    /* 조건 두 개가 다 동작할때 띄어쓰기 없이 붙여 써줌 */
+    .menubar-act.menubar-middle{
+        /* 기존 조건 유지하면서 변화시키려면 다 써줘야함 */
+        transform: translate(-100%, -50%);
+    }
     .menubar-bottom{
         top:100%;
         transform: translateY(-100%);
+    }
+    .menubar-act.menubar-bottom{
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        color: transparent;
     }
     .menu{
         background-color: rgba(0,0,0, 0.85);
@@ -114,6 +136,7 @@ body{
         color: #fff;
         padding: 3em 0 0 2em;
         transform: translateX(-100%);
+        transition: all 200ms;
     }
     .menu-act{
         transform: translateX(0);
@@ -128,6 +151,9 @@ body{
        margin: 0 auto;
    }
    /* 모바일 메뉴 */
+   .btn-wrapper{
+       display: none;
+   }
    .menu{
         display: flex;
         justify-content: space-around;
@@ -159,6 +185,9 @@ body{
         width: 20%;
    }
    /* 데스크탑 메뉴 */
+   .btn-wrapper{
+    display: none;
+}
    .menu{
        grid-area: menu;
        display: flex;
