@@ -18,7 +18,6 @@ img{
 }
 /* 숨긴 콘텐츠 :  */
 .readable-hidden{
-    background: pink;
     position: absolute;
     /* left: -9999em; */
     width: 1px;
@@ -30,7 +29,36 @@ img{
 }
 
 body{
+    background: url("../images/road.png") no-repeat 0 0 /cover fixed;
 }
+/* header 공통 */
+.header{
+    background-color: #fff;
+    z-index: 10;
+}
+
+/* 광고섹션 공통 */
+.ad{
+    color: #fff;
+    font-size: 3em;
+}
+.ad .ad-content{
+    /* static이 position의 기본값 */
+    position: sticky;
+    top: 100px;
+    /* justify-content 모델은 display가 flex일때만 적용 */
+    text-align: right;
+}
+/* main 공통 */
+.main{
+    background-color: #fff;
+}
+/* footer 공통 */
+.footer{
+    background-color: #181818;
+    color: #fff;
+}
+
 /* --- 여기까지는 공통부분 --- */
 
 
@@ -43,13 +71,11 @@ body{
    }
    /* 모바일 메뉴 */
    .menu{
-        background: yellow;
         display: flex;
         justify-content: space-around;
    }
    .menu a{
        display: block;
-       background: pink;
        padding: 1em;
        text-transform: uppercase;
    }
@@ -60,10 +86,10 @@ body{
    .header{
        display: grid;
        grid-template-areas: "logo    menu";
-       background-color: lime;
        align-items: center;
        padding: 1em 2em;
-       position: fixed;
+       /* sticky  보통 fixed로 구현할 때는 상단 margin으로 구현 */
+       position: sticky;
        width: 100%;
        top: 0;
        left: 0;
@@ -73,13 +99,11 @@ body{
        /* area 이름을 정해주면 부모에서 grid-template-area에서 형식을 설정가능 */
        grid-area: logo;
         width: 20%;
-        background-color: yellow;
    }
    /* 데스크탑 메뉴 */
    .menu{
        grid-area: menu;
        display: flex;
-       background-color: pink;
    }
    .menu a{
        display: block;
@@ -95,15 +119,12 @@ body{
         content: "";
    }
    .ad{
-       background: orange;
        height: 50vh;
    }
    .main{
-       background: orange;
        height: 50vh;
    }
    .footer{
-       background: orange;
        height: 50vh;
    }
 }
