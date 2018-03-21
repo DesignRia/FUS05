@@ -1,0 +1,16 @@
+.bg-light{
+}
+.display-4{
+    font-family: 'Nanum Brush Script', cursive;
+}
+.bg-fus{
+}
+.lead .btn-success{
+    float: right;
+}
+.card{
+    width: 80%;
+    margin: 0 auto;
+}
+.row .col:nth-child(even) .card{
+}
