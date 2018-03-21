@@ -1,0 +1,50 @@
+@charset "utf-8";
+*, *:before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* 작업을 수월하게 만들기 위해서 속성을 부모에서 받게 미리 설정 */
+    font: inherit;
+}
+
+.heading{
+    font-size: 3em;
+}
+
+.note{
+    background-color: yellow;
+    width: 800px;
+    /* zoom:1; 익스플로러 6에 적용
+    overflow: hidden;*/
+}
+.note img{
+    /* auto 원본이미지 비율 유지 */
+    width: 200px;
+    height: auto;
+    float: right;
+    position: relative;
+    right: -50px;
+}
+
+/*::after를 쓰면 마지막에 자식요소가 가상으로 추가됨, inline 속성  */
+.clearfix::after{
+    content: "";
+    clear: both;
+    /* inline에는 clear 값 적용 못함 */
+    display: block;
+}
+.next{
+    background-color: pink;
+    /* clear : float속성을 해제시킴, float된 만큼 강제로 margin  */
+    /* clear: both;
+    margin-top: 100px; */
+    margin-top: 50px;
+    width: 800px;
+}
+
+.next img{
+    float: left;
+    width: 200px;
+    height: auto;
+}

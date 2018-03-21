@@ -15,6 +15,7 @@ img{
     /* 반응형 이미지로 만들어줌 */
     max-width: 100%;
     height: auto;
+    padding: 0.35em;
 }
 /* 숨긴 콘텐츠 :  */
 .readable-hidden{
@@ -56,10 +57,6 @@ body{
     background-color: #fff;
 }
 /* footer 공통 */
-.footer{
-    background-color: #181818;
-    color: #fff;
-}
 
 /* --- 여기까지는 공통부분 --- */
 
@@ -67,20 +64,21 @@ body{
 @media screen and (min-width: 1px) and (max-width: 551px){
     /* 모바일 Small logo  */
     .logo{
-        background-color: yellow;
         margin: 0;
         width: 35%;
         margin-left: 1em;
     }
     /* 모바일 Small menu  */
     .btn-wrapper{
-        background-color: aqua;
         position: fixed;
-        top:0.5em;
+        top: 0.5em;
         right:1em;
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         overflow: hidden;
+        z-index: 1;
+        background: white;
+        border: white solid 2px;
     }
     .btn-menubar{
         border: 0;
@@ -141,6 +139,21 @@ body{
     .menu-act{
         transform: translateX(0);
     }
+    
+    .main .box{
+        min-height: 100px;
+        margin: 1em;
+    }
+    .box:last-child{
+        margin: 0 0 0 1em;
+    }
+
+    .footer{
+        background: #181818;;
+        color: #fff;
+        height: 10vh;
+    }
+
 }
 
 /* 모바일 디바이스 */
@@ -162,6 +175,22 @@ body{
        display: block;
        padding: 1em;
        text-transform: uppercase;
+   }
+   /* 모바일 메인 */
+   .main{
+       overflow: hidden;
+   }
+   .box{
+       float: left;
+       width: 45%;
+       height: 150px;
+       /* float 되면 margin이 병합되지 않는다 */
+       margin: 1em 2.5%;
+}
+   .box1{
+   }
+   .footer{
+       height: 10vh;
    }
 }
 /* 데스크탑 디바이스 */
@@ -208,10 +237,23 @@ body{
    .ad{
        height: 50vh;
    }
+
+   /* 데스크탑 메인 */
    .main{
-       height: 50vh;
+    display: grid;
+    grid-template-areas: "box box box box";
+    grid-auto-columns: 20%;
+    grid-auto-rows: 150px;
+    justify-content: space-between;
+    grid-row-gap: 20px;
+    padding: 2em;
+    }
+    .main .box{
+    background-color: #fff;
    }
+
+/* 데스크탑 푸터 */
    .footer{
-       height: 50vh;
+       height: 10vh;
    }
 }
